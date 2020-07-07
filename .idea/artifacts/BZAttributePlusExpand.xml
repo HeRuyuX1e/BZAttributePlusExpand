@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="BZAttributePlusExpand">
+    <output-path>$PROJECT_DIR$/out/artifacts/BZAttributePlusExpand</output-path>
+    <root id="archive" name="BZAttributePlusExpand.jar">
+      <element id="module-output" name="BZAttributePlusExpand" />
+    </root>
+  </artifact>
+</component>

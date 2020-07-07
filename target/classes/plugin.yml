@@ -1,5 +1,5 @@
 name: BZAttributePlusExpand
-version: ${project.version}
+version: 1.0-SNAPSHOT
 main: xya.angsu.bzattributeplusexpand.BZAttributePlusExpand
 api-version: 1.14
 depend: [AttributePlus]

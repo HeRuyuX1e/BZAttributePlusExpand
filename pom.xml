@@ -3,12 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>xya.angsu</groupId>
     <artifactId>BZAttributePlusExpand</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
     <name>BZAttributePlusExpand</name>
 
     <description>冰系AttributePlus拓展器，提供一些额外的属性标签。</description>
@@ -70,6 +68,11 @@
             <artifactId>paper-api</artifactId>
             <version>1.14.4-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.serverct.ersha.jdr</groupId>
+            <artifactId>AttributePlus</artifactId>
+            <version>2.1.8</version>
         </dependency>
     </dependencies>
 </project>
