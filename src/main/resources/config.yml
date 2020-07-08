@@ -1,2 +1,3 @@
 Version: ${project.version}
 AutoUpdateConfig: false
+MessagePrefix: "&7[ &a&l琉璃幻境 &r&7] >> &7&l"

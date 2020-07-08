@@ -3,6 +3,7 @@ package xya.angsu.bzattributeplusexpand;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.serverct.ersha.jd.api.AttributeType;
+import xya.angsu.bzattributeplusexpand.AttributeRegisters.Collection;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 public final class BZAttributePlusExpand extends JavaPlugin {
+    public static String MessagePrefix;
     private static YamlConfiguration Attribute;
 
     @Override
@@ -53,6 +55,7 @@ public final class BZAttributePlusExpand extends JavaPlugin {
             saveResource("Attribute.yml",true);
         }
         getLogger().info("属性文件载入完成！");
+        MessagePrefix = getConfig().getString("MessagePrefix").replace("&","§");
     }
 
     @Override
@@ -63,7 +66,12 @@ public final class BZAttributePlusExpand extends JavaPlugin {
         List<String> attribute = new ArrayList<>(setAttribute);
         for (String s: attribute){
             getLogger().info("注册属性："+s+" 变量名称为：%ap_"+Attribute.getString("Attribute."+s+".ID")+"%");
-            new AttributeRegister(AttributeType.DAMAGE,s,Attribute.getString("Attribute."+s+".ID")).registerAttribute();
+            if (s.equalsIgnoreCase("采集伤害")){
+                new Collection().registerAttribute();
+                continue;
+            }
+            new AttributeRegister(AttributeType.DAMAGE, s, Attribute.getString("Attribute." + s + ".ID")).registerAttribute();
+
         }
         getLogger().info("额外属性注册完成！");
     }

@@ -1,3 +1,4 @@
 Attribute:
-  "测试属性":
-    ID: "test"
+  # 内置属性
+  "采集属性":
+    ID: "collection"
