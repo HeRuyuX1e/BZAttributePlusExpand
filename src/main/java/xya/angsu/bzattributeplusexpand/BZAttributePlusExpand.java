@@ -5,7 +5,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.serverct.ersha.jd.api.AttributeType;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public final class BZAttributePlusExpand extends JavaPlugin {
     private static YamlConfiguration Attribute;
@@ -56,19 +58,18 @@ public final class BZAttributePlusExpand extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("开启注册额外属性...");
-        loadAttribute();
+        Set<String> setAttribute = Attribute.getConfigurationSection("Attribute").getKeys(false);
+        // 这里好像不转化为List类型也可以，只是不想里面有重复元素导致重复注册。
+        List<String> attribute = new ArrayList<>(setAttribute);
+        for (String s: attribute){
+            getLogger().info("注册属性："+s+" 变量名称为：%ap_"+Attribute.getString("Attribute."+s+".ID")+"%");
+            new AttributeRegister(AttributeType.DAMAGE,s,Attribute.getString("Attribute."+s+".ID")).registerAttribute();
+        }
         getLogger().info("额外属性注册完成！");
     }
 
     @Override
     public void onDisable() {
 
-    }
-    public void loadAttribute(){
-        List<String> attribute = Attribute.getStringList("Attribute");
-        for (String s: attribute){
-            System.out.println("获取到的属性名称为："+s+" 获取到的变量名称为："+Attribute.getString("Attribute."+s+".ID"));
-            new AttributeRegister(AttributeType.DAMAGE,s,Attribute.getString("Attribute."+s+".ID")).registerAttribute();
-        }
     }
 }

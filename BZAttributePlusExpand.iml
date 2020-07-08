@@ -36,6 +36,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-commons:7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-tree:7.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.ow2.asm:asm-analysis:7.1" level="project" />
-    <orderEntry type="library" name="AttributePlus" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.serverct.ersha.jd:AttributePlus:2.1.8" level="project" />
   </component>
 </module>

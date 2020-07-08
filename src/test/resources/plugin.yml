@@ -1,0 +1,8 @@
+name: BZAttributePlusExpand
+version: ${project.version}
+main: xya.angsu.bzattributeplusexpand.BZAttributePlusExpand
+api-version: 1.14
+depend: [AttributePlus]
+softdepend: [BZCore]
+authors: [BingZi]
+description: 冰系AttributePlus拓展器，提供一些额外的属性标签。

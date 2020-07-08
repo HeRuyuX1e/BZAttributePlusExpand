@@ -27,6 +27,11 @@
       <option name="url" value="https://packages.aliyun.com/maven/repository/2013621-snapshot-cVzIdk/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="handy-minecraft" />
+      <option name="name" value="handy-minecraft" />
+      <option name="url" value="http://maven.ljxmc.top/repository/handy-minecraft/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public" />

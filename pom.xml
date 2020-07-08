@@ -60,6 +60,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>handy-minecraft</id>
+            <url>http://maven.ljxmc.top/repository/handy-minecraft/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -70,9 +74,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.serverct.ersha.jdr</groupId>
+            <groupId>org.serverct.ersha.jd</groupId>
             <artifactId>AttributePlus</artifactId>
             <version>2.1.8</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
